@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"/>
+    <title>html select bug in iOS</title>
+</head>
+<body>
+
+
+<form>
+    <h1>Showcase html select bug in iOS and when full keyboard access is enabled</h1>
+    <p>
+
+        <label for="input">Input label 1</label><br>
+        <input id="input" name="input" type="text" value="" maxlength="5">
+    </p>
+
+    <button>A button is tabbable</button>
+    <p>A non input element which is tabbable before a select will make next element work as expected.</p>
+
+    <p>
+        <label for="pet-select">Choose a pet:</label>
+
+        <select name="pets" id="pet-select">
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+            <option value="hamster">Hamster</option>
+            <option value="parrot">Parrot</option>
+            <option value="spider">Spider</option>
+            <option value="goldfish">Goldfish</option>
+        </select>
+    </p>
+
+    <p>
+
+        <label for="input2">Input label 2</label><br>
+        <input id="input2" name="input2" type="text" value="" maxlength="5">
+    </p>
+
+    <h2>Attention to Apple developers</h2>
+    <p>Having a normal html text input exist as the previous tabbable element before a
+        select element causes the option list to be automatically shown or focused instead of just tabbable.</p>
+
+    <p>
+        <label for="pet2-select">Choose a fruit:</label><br>
+
+        <select name="pets" id="pet2-select">
+            <option disabled selected value>Choose an option</option>
+            <option value="apple">Apple</option>
+            <option value="banana">Banana</option>
+            <option value="guava">Guava</option>
+            <option value="orange">Orange</option>
+            <option value="papaya">Papaya</option>
+            <option value="strawberry">Strawberry</option>
+        </select>
+    </p>
+
+    <p>
+
+        <label for="input3">Input label 3</label><br>
+        <input id="input3" name="input3" type="text" value="" maxlength="5">
+    </p>
+
+    <h2>Note</h2>
+    <p>This next select element will be harder to get to in iOS with full keyboard access enabled.
+        Please fix this bug.
+    </p>
+
+    <p>
+        <label for="pet3-select">Choose another fruit:</label><br>
+
+        <select name="pets" id="pet3-select">
+            <option value="apple">Apple</option>
+            <option value="banana">Banana</option>
+            <option value="guava">Guava</option>
+            <option value="orange">Orange</option>
+            <option value="papaya">Papaya</option>
+            <option value="strawberry">Strawberry</option>
+        </select>
+    </p>
+
+    <p><button type="button">Button at end of page</button></p>
+
+
+</form>
+</body>
+</html>
